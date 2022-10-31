@@ -4,46 +4,42 @@ import Icon from "$lib/display/Icon.svelte"
 import type { Prop } from "$lib/utils/typed_props"
 import Flag from "svelte-material-icons/FlagOutline.svelte"
 
-let zones: Prop<Zone, "zone">[] = [
-    {
-        slug: "lumina",
-        name: "Lumina",
-        type: ["Autonomous City", "Proposed Country"],
-    },
-    {
-        slug: "city-of-telosa",
-        name: "City of Telosa",
-        type: ["Autonomous City"],
-    }
-]
+let project_name = "lumina-site"
 
 </script>
 
 <div class="hero dark">
     <div class="inner padding gap">
         <h1>
-            <div class="icon"><Icon icon={Flag}/></div>
             <div class="text">
-                Autonomous Zones
+                lumina-site
             </div>
         </h1>
-        <div class="description">
-            A global index of autonomous zones, new city projects, proposed countries and more.
-        </div>
     </div>
 </div>
 <div class="hero">
     <div class="inner padding gap">
-        <h2>List of Autonomous Zones</h2>
-        <div class="zones">
-            {#each zones as zone}
-                <Zone zone={zone}/>
-            {/each}
+        <h2>Production deployment</h2>
+        <div class="description">
+            The deployment that is available to your visitors
+        </div>
+        <div class="deployment">
+
         </div>
     </div>
 </div>
 <style lang="stylus">
 @import "variables"
+
+.description
+    opacity 0.7
+    font-size 16px
+    font-weight 400
+
+.deployment
+    background transparify(black, 20%)
+    padding 16px
+    border-radius 8px
 
 h1
     font-size 44px
@@ -51,19 +47,6 @@ h1
     align-items center
     gap 8px
     font-weight 700
-    .icon
-        color $brand
-        display inline-flex
-
-.description
-    opacity 0.7
-    font-size 18px
-    font-weight 400
-
-.zones
-    display flex
-    flex-direction column
-    gap 16px
 
 .hero
     display flex
@@ -83,6 +66,5 @@ h1
         background transparify(black, 20%)
 </style>
 <svelte:head>
-    <title>Autonomous Zones</title>
-    <meta name="description" content="A global index of autonomous zones, new city projects, proposed countries and more." />
+    <title>{project_name} - Iter</title>
 </svelte:head>
