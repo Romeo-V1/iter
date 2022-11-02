@@ -16,7 +16,7 @@ let project_name = "lumina-site"
         <div class="project">{ project_name }</div>
     </div>
     <div class="right">
-        <a href="/about">Deployments</a>
+        <a href="/">Deployments</a>
         <a href="/">Settings</a>
         <Profile/>
     </div>
