@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ProjectHeader from "$lib/components/ProjectHeader.svelte";
 import Zone from "$lib/components/Zone.svelte"
 import Icon from "$lib/display/Icon.svelte"
 import type { Prop } from "$lib/utils/typed_props"
@@ -8,6 +9,7 @@ let project_name = "lumina-site"
 
 </script>
 
+<ProjectHeader/>
 <div class="hero dark">
     <div class="inner padding gap">
         <h1>
